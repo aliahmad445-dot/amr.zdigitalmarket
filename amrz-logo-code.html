@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMRZ Digital Market - Logo</title>
+  <style>
+    /* ============================================
+       AMRZ DIGITAL MARKET — OFFICIAL LOGO CODE
+       Website: amrzdigitalmarket.com
+       Use this file on any website or HTML page
+       ============================================ */
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .preview-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .preview-dark {
+      background: #050814;
+    }
+
+    /* ============================================
+       LOGO STYLES — COPY THIS INTO YOUR CSS
+       ============================================ */
+
+    .amrz-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+      cursor: default;
+      text-decoration: none;
+    }
+
+    /* Size variants */
+    .amrz-logo.size-sm  { --font-size: 36px; --sub-size: 9px;  --sub-spacing: 4px; --divider-h: 1px; }
+    .amrz-logo.size-md  { --font-size: 56px; --sub-size: 13px; --sub-spacing: 6px; --divider-h: 1.5px; }
+    .amrz-logo.size-lg  { --font-size: 88px; --sub-size: 20px; --sub-spacing: 9px; --divider-h: 2px; }
+    .amrz-logo.size-xl  { --font-size: 120px; --sub-size: 26px; --sub-spacing: 11px; --divider-h: 2.5px; }
+
+    .amrz-logo .amrz-row {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .amrz-logo .ltr {
+      font-family: 'Arial Black', 'Arial Bold', sans-serif;
+      font-size: var(--font-size, 88px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    /* A - Gold */
+    .amrz-logo .la {
+      color: #ffd700;
+      text-shadow: 0 0 25px rgba(255,200,0,0.5);
+    }
+
+    /* M - Deep Navy */
+    .amrz-logo .lm {
+      background: linear-gradient(160deg, #1a1a2e 0%, #0f3460 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* R - Crimson */
+    .amrz-logo .lr {
+      background: linear-gradient(160deg, #8b0000 0%, #c0392b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* . - Gold dot */
+    .amrz-logo .dot-sep {
+      font-family: 'Arial Black', sans-serif;
+      font-size: var(--font-size, 88px);
+      font-weight: 900;
+      color: #ffd700;
+      text-shadow: 0 0 20px rgba(255,200,0,0.8);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    /* Z - Electric Blue */
+    .amrz-logo .lz {
+      color: #2288ff;
+      text-shadow: 0 0 20px rgba(30,120,255,0.7);
+    }
+
+    /* Divider line */
+    .amrz-logo .amrz-divider {
+      width: 100%;
+      height: var(--divider-h, 1.5px);
+      background: linear-gradient(
+        90deg,
+        #ffd700 0%,
+        #8b0000 25%,
+        #1a1a2e 55%,
+        rgba(0,100,255,0.4) 80%,
+        transparent 100%
+      );
+      border-radius: 2px;
+      margin-top: -3px;
+      margin-bottom: 3px;
+    }
+
+    /* Sub text row */
+    .amrz-logo .sub-row {
+      display: flex;
+      padding-left: 2px;
+    }
+
+    .amrz-logo .sub-digital {
+      font-family: Arial, sans-serif;
+      font-size: var(--sub-size, 20px);
+      font-weight: 700;
+      letter-spacing: var(--sub-spacing, 9px);
+      color: #1a1a2e;
+      text-transform: uppercase;
+    }
+
+    .amrz-logo .sub-market {
+      font-family: Arial, sans-serif;
+      font-size: var(--sub-size, 20px);
+      font-weight: 300;
+      letter-spacing: var(--sub-spacing, 9px);
+      color: rgba(139,0,0,0.5);
+      text-transform: uppercase;
+    }
+
+    /* Dark mode override */
+    .dark-mode .amrz-logo .lm {
+      background: linear-gradient(160deg, #aac4ff 0%, #7eb8ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .dark-mode .amrz-logo .lr {
+      background: linear-gradient(160deg, #ff6b6b 0%, #ff4444 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .dark-mode .amrz-logo .sub-digital { color: rgba(200,220,255,0.9); }
+    .dark-mode .amrz-logo .sub-market  { color: rgba(255,120,120,0.6); }
+    .dark-mode .amrz-logo .amrz-divider {
+      background: linear-gradient(90deg, #ffd700, #ff4444 25%, #4488ff 55%, transparent 100%);
+    }
+
+    /* ============ PREVIEW PAGE STYLES (not part of logo) ============ */
+    .label { font-size: 11px; color: #aaa; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+    .section { text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================
+       LOGO HTML COMPONENT — COPY THE .amrz-logo div
+       into your website header/navbar
+       ================================================ -->
+
+  <div class="section">
+    <h2>Light Background</h2>
+    <div class="preview-box">
+      <!-- LARGE SIZE -->
+      <div class="amrz-logo size-lg">
+        <div class="amrz-row">
+          <span class="ltr la">A</span>
+          <span class="ltr lm">M</span>
+          <span class="ltr lr">R</span>
+          <span class="dot-sep">.</span>
+          <span class="ltr lz">Z</span>
+        </div>
+        <div class="amrz-divider"></div>
+        <div class="sub-row">
+          <span class="sub-digital">Digital&nbsp;</span>
+          <span class="sub-market">Market</span>
+        </div>
+      </div>
+      <div class="label">Large — Website Header / Hero</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Medium Size — Navbar</h2>
+    <div class="preview-box">
+      <div class="amrz-logo size-md">
+        <div class="amrz-row">
+          <span class="ltr la">A</span>
+          <span class="ltr lm">M</span>
+          <span class="ltr lr">R</span>
+          <span class="dot-sep">.</span>
+          <span class="ltr lz">Z</span>
+        </div>
+        <div class="amrz-divider"></div>
+        <div class="sub-row">
+          <span class="sub-digital">Digital&nbsp;</span>
+          <span class="sub-market">Market</span>
+        </div>
+      </div>
+      <div class="label">Medium — Navbar / Top Bar</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Small Size — Favicon / Mobile</h2>
+    <div class="preview-box">
+      <div class="amrz-logo size-sm">
+        <div class="amrz-row">
+          <span class="ltr la">A</span>
+          <span class="ltr lm">M</span>
+          <span class="ltr lr">R</span>
+          <span class="dot-sep">.</span>
+          <span class="ltr lz">Z</span>
+        </div>
+        <div class="amrz-divider"></div>
+        <div class="sub-row">
+          <span class="sub-digital">Digital&nbsp;</span>
+          <span class="sub-market">Market</span>
+        </div>
+      </div>
+      <div class="label">Small — Mobile / Compact Header</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Dark Mode</h2>
+    <div class="preview-box preview-dark dark-mode">
+      <div class="amrz-logo size-lg">
+        <div class="amrz-row">
+          <span class="ltr la">A</span>
+          <span class="ltr lm">M</span>
+          <span class="ltr lr">R</span>
+          <span class="dot-sep">.</span>
+          <span class="ltr lz">Z</span>
+        </div>
+        <div class="amrz-divider"></div>
+        <div class="sub-row">
+          <span class="sub-digital">Digital&nbsp;</span>
+          <span class="sub-market">Market</span>
+        </div>
+      </div>
+      <div class="label" style="color:#444;">Large — Dark Background</div>
+    </div>
+  </div>
+
+</body>
+</html>
