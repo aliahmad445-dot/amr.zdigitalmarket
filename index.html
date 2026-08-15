@@ -13,11 +13,77 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
+/* --- Core UI Tokens Fix --- */
 :root {
   --leading: 28px;
   --half: 14px;
   --edge: clamp(20px, 5vw, 72px);
   --measure: 58ch;
+
+  /* Essential Color Tokens */
+  --font-heading: system-ui, -apple-system, sans-serif;
+  --font-heading-weight: 700;
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text: #0f172a;
+  --color-accent: #2563eb;
+  --color-accent-100: #dbeafe;
+  --color-accent-200: #bfdbfe;
+  --color-accent-300: #93c5fd;
+  --color-accent-700: #1d4ed8;
+  --color-accent-800: #1e40af;
+  --color-accent-2-100: #fef3c7;
+  --color-accent-2-200: #fde68a;
+  --color-accent-2-700: #b45309;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+}
+
+/* --- Base Button Classes --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff !important;
+}
+.btn-primary:hover {
+  background: var(--color-accent-700);
+}
+
+.btn-ghost, .btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid #cbd5e1;
+}
+.btn-ghost:hover, .btn-secondary:hover {
+  background: var(--color-surface);
+}
+
+/* --- Navigation Fix --- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.nav-brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text);
 }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
