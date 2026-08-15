@@ -2,6 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo:wght@400&family=Figtree:wght@400;600;700&display=swap');
 
 :root {
+    --color-bg: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-text: #222222;
+  --color-accent: #ff8c00;
+  --color-accent-700: #d97706;
+  --color-accent-800: #b45309;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-2-100: #e0e7ff;
+  --color-accent-2-200: #c7d2fe;
+  --color-accent-2-700: #4338ca;
+  --font-heading: system-ui, sans-serif;
+  --font-heading-weight: 700;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
   --color-bg: #f5ead8;
   --color-surface: #ebddc5;
   --color-text: #201e1d;
