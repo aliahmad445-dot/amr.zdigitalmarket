@@ -53,13 +53,28 @@
     return 'USD';
   };
 
+  // The visitor's country comes from /api/country (Vercel reads it from the IP address).
+  // The timezone guess above is only used until that answer arrives, or if it is unavailable.
+  const COUNTRY_CURRENCY = {
+    PK: 'PKR', US: 'USD', GB: 'GBP', AE: 'AED', SA: 'SAR', QA: 'QAR', KW: 'KWD', OM: 'OMR', BH: 'BHD',
+    IN: 'INR', BD: 'BDT', CA: 'CAD', AU: 'AUD', NZ: 'NZD', MY: 'MYR', SG: 'SGD', TR: 'TRY', CN: 'CNY',
+    JP: 'JPY', ZA: 'ZAR',
+  };
+  const EURO_COUNTRIES = ['AT', 'BE', 'CY', 'EE', 'FI', 'FR', 'DE', 'GR', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'SK', 'SI', 'ES', 'HR'];
+  const fromCountry = (cc) => COUNTRY_CURRENCY[cc] || (EURO_COUNTRIES.indexOf(cc) !== -1 ? 'EUR' : 'USD');
+
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
   };
+  const session = {
+    get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} },
+  };
 
   let rates = FALLBACK;
-  let currency = guessCurrency();
+  const knownCountry = session.get('amrz-country');
+  let currency = knownCountry ? fromCountry(knownCountry) : guessCurrency();
   if (!CURRENCIES[currency]) currency = 'USD';
 
   // Round converted prices to friendly numbers.
@@ -89,6 +104,21 @@
   };
 
   render();
+
+  // Country by IP. Updates the prices if it disagrees with the timezone guess.
+  fetch('/api/country', { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((d) => {
+      if (!d || !d.country) return;
+      const cc = String(d.country).toUpperCase();
+      session.set('amrz-country', cc);
+      const next = fromCountry(cc);
+      if (CURRENCIES[next] && next !== currency) {
+        currency = next;
+        render();
+      }
+    })
+    .catch(() => {});
 
   // Live rates, cached for 12 hours.
   const cached = JSON.parse(store.get('amrz-rates') || 'null');
